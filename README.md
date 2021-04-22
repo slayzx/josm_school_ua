@@ -9,5 +9,5 @@ What should be done before installation In the testing mode -> Wiki
 
 Add https://raw.githubusercontent.com/slayzx/josm_school_ua/master/ua_school.xml in JOSM editor.
 
-Uk: Заготовки -> Preset preferences -> Налаштування заготовок -> Активні заготовки «+»
+Uk: Заготовки -> Налаштування заготовок -> Активні заготовки «+»
 
