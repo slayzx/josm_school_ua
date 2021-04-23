@@ -8,8 +8,8 @@ If you want to share your custom tags with other users, please look through the 
  * https://josm.openstreetmap.de/wiki/TaggingPresets
  * https://wiki.openstreetmap.org/wiki/Customising_JOSM_Presets
 -->
-    <group name="UA:School" uk.name="Школи" icon="https://commons.wikimedia.org/wiki/File:001-teacher.svg"  icon_size="16">
-        <item name="School territory" uk.name="Територія школи" type="node,closedway,multipolygon" icon="https://commons.wikimedia.org/wiki/File:School_pixel.png" icon_size="16">
+    <group name="UA:School" uk.name="Школи" icon="https://upload.wikimedia.org/wikipedia/commons/6/65/001-teacher.svg"  icon_size="16">
+        <item name="School territory" uk.name="Територія школи" type="node,closedway,multipolygon" icon="https://upload.wikimedia.org/wikipedia/commons/0/0e/School_pixel.png" icon_size="16">
             <label text="UA:School"/>
             <key key="amenity" value="school"/>
             <text key="name" text="Назва школи" default=""/>
@@ -29,7 +29,7 @@ If you want to share your custom tags with other users, please look through the 
             <text key="mах_age" text="Макс. вік відвідування" default=""/>
             <link href="https://wiki.openstreetmap.org/wiki/Uk:Tag:amenity%3Dschool"/>
         </item>
-        <item name="School buiding" uk.name="Будівля школи" type="closedway,multipolygon" icon="https://commons.wikimedia.org/wiki/File:Eucalyp-Deus_High_School.png" icon_size="16">
+        <item name="School buiding" uk.name="Будівля школи" type="closedway,multipolygon" icon="https://upload.wikimedia.org/wikipedia/commons/b/bc/Eucalyp-Deus_High_School.png" icon_size="16">
             <label text="UA:School"/>
             <key key="buiding" value="school"/>
             <text default="" key="addr:housenumber" text="Номер будинку школи"/>
