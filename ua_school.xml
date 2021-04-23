@@ -24,6 +24,7 @@ If you want to share your custom tags with other users, please look through the 
             <text key="contact:email" text="Електронна пошта школи" default=""/>
             <text key="contact:website" text="Сайт школи" default=""/>
             <item_separator/>
+            <multiselect key="barrier" text="Вид огороджи" values="fence;hedge;wall" display_values="Паркан;Жива огорожа;Стіна"/>
             <check key="fee" text="Плата за навчання" default="off"/>
             <text key="min_age" text="Мін. вік відвідування" default=""/>
             <text key="mах_age" text="Макс. вік відвідування" default=""/>
