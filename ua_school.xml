@@ -26,6 +26,7 @@ If you want to share your custom tags with other users, please look through the 
             <item_separator/>
             <multiselect key="barrier" text="Вид огороджи" values="fence;hedge;wall" display_values="Паркан;Жива огорожа;Стіна"/>
             <check key="fee" text="Плата за навчання" default="off"/>
+            <text key="ref" text="Номер школи в системі ІСУО" default=""/>
             <text key="min_age" text="Мін. вік відвідування" default=""/>
             <text key="mах_age" text="Макс. вік відвідування" default=""/>
             <link href="https://wiki.openstreetmap.org/wiki/Uk:Tag:amenity%3Dschool"/>
