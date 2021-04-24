@@ -13,7 +13,7 @@ If you want to share your custom tags with other users, please look through the 
             <label text="UA:School"/>
             <key key="amenity" value="school"/>
             <text key="name" text="Назва школи" default=""/>
-            <text key="uk:name" text="Назва школи українською" default=""/>
+            <text key="name:uk" text="Назва школи українською" default=""/>
             <text key="official_name" text="Офіційна назва" default=""/>
             <text key="short_name" text="Коротка назва" default=""/>
             <text key="operator" text="Керуюча установа" default=""/>
