@@ -1,0 +1,21 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="128" height="128" rx="10" fill="#22C55E"/>
+<path d="M11.6126 101.334H116.56C116.56 103.271 114.99 104.841 113.053 104.841H15.1192C13.1826 104.841 11.6126 103.271 11.6126 101.334Z" fill="black"/>
+<rect x="8.54642" y="96.2018" width="110.907" height="5.50659" rx="2.7533" fill="white" stroke="black" stroke-width="2"/>
+<rect x="12.2147" y="25.1449" width="21.3184" height="69.841" rx="5" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="33.9101" y="25.1449" width="21.3184" height="69.841" rx="5" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="22.8047" cy="65.9198" rx="4.04636" ry="5.8543" stroke="black" stroke-width="2"/>
+<ellipse cx="44.5694" cy="65.9198" rx="4.04636" ry="5.8543" stroke="black" stroke-width="2"/>
+<path d="M12.6458 38.4562H32.7915" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.6457 42.933H32.7913" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.4965 38.4562H54.6421" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.4966 42.933H54.6423" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="55.6053" y="25.145" width="21.3184" height="69.841" rx="5" fill="white" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="66.2645" cy="65.9198" rx="4.04636" ry="5.8543" stroke="black" stroke-width="2"/>
+<path d="M55.7784 38.4563H75.9241" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M55.7777 42.9332H75.9234" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="75.4763" y="28.8634" width="22.0397" height="70.5529" rx="5" transform="rotate(-15 75.4763 28.8634)" fill="black"/>
+<ellipse cx="96.7697" cy="65.7188" rx="4.04636" ry="5.8543" transform="rotate(-15 96.7697 65.7188)" fill="black" stroke="white" stroke-width="2"/>
+<path d="M80.8374 41.5554L98.3261 36.8693" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81.9962 45.8796L99.485 41.1935" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
