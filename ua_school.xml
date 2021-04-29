@@ -5,23 +5,21 @@
     uk.shortdescription="UA:Освіта"
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовки для додавання навчальних закладів в Україні"
-    version="0.18_2021-04-27">
+    version="0.20_2021-04-29">
     <group name="UA:Education"
         uk.name="UA:Освіта"
-        icon="https://upload.wikimedia.org/wikipedia/commons/e/e6/Nuvola_apps_edu_miscellaneous_Cyrilic.svg"
-        icon_size="16">
+        icon="icons/edu.svg">
         <group name="UA:Schools"
             uk.name="Школи"
-            icon="https://raw.githubusercontent.com/slayzx/josm_school_ua/master/icons/school_icon.svg"
+            icon="icons/school/group.svg"
             icon_size="16">
             <item name="School territory"
                 uk.name="Територія школи"
-                type="closedway,multipolygon"
-                icon="https://raw.githubusercontent.com/slayzx/josm_school_ua/master/icons/school_territory.svg"
+                type="node,closedway,multipolygon"
+                icon="icons/school/item.svg"
                 icon_size="16"
                 preset_name_label="true">
-                <link wiki="Uk:Tag:amenity=school" />
-                <space />
+                <link wiki="Uk:Tag:amenity=school" text="Детальніше про теґування шкіл" />
                 <key key="amenity"
                     value="school" />
                 <text key="name"
@@ -39,11 +37,11 @@
                 <text key="operator"
                     text="Керуюча установа"
                     default="" />
-                <multiselect key="operator:type"
+                <combo key="operator:type"
                     text="Тип установи"
-                    values="public;private"
-                    display_values="публічна (комунальна);приватна"
-                    rows="2" />
+                    values="public,private,government;"
+                    display_values="публічна (комунальна),приватна,державна"
+                    values_sort="false" />
                 <check key="fee"
                     text="Плата за навчання"
                     default="off"
@@ -52,79 +50,80 @@
                     text="Макс. кількість учнів"
                     default="" />
                 <item_separator />
-                <label text="Для внесення телефонного номера використовуйте формат E.123, наприклад +380 44 123 4567" />
                 <text key="contact:phone"
-                    text="Телефон школи"
+                    text="Телефон, наприклад +380 44 123 4567"
                     default="" />
                 <text key="contact:email"
-                    text="Електронна пошта школи"
+                    text="Електронна пошта"
                     default="" />
                 <text key="contact:website"
-                    text="Сайт школи"
+                    text="Сайт"
                     default="" />
-                <text key="ref"
+                <text key="ref:edbo"
+                    text="Код школи в реєстрі ЄДЕБО"
+                    default="" />
+                <text key="ref:isuo"
                     text="Номер школи в системі ІСУО"
                     default="" />
                 <item_separator />
                 <multiselect key="isced:level"
                     text="Рівень освіти (ISCED)"
                     values="0;1;2;3"
-                    rows="4" />
+                    rows="5"
+                    delete_if_empty="true" />
                 <text key="min_age"
-                    text="Мін. вік відвідування"
+                    text="Мінімальний вік учнів"
                     default="" />
                 <text key="mах_age"
-                    text="Макс. вік відвідування"
+                    text="Максимальний вік учнів"
                     default="" />
             </item> <!-- School territory -->
-            <item name="NVK (I-II) territory"
-                uk.name="Територія НВК (I-II ступенів)"
-                type="closedway,multipolygon"
-                icon="https://raw.githubusercontent.com/slayzx/josm_school_ua/master/icons/nvk_1.svg"
-                icon_size="16"
-                preset_name_label="true">
-                <key key="amenity"
-                    value="school" />
-                <key key="isced:level"
-                    value="0;1;2" />
-                <key key="min_age"
-                    value="3" />
-            </item> <!-- NVK_1 territory -->
-            <item name="NVK (I-III) territory"
-                uk.name="Територія НВК (I-III ступенів)"
-                type="closedway,multipolygon"
-                icon="https://raw.githubusercontent.com/slayzx/josm_school_ua/master/icons/nvk_2.svg"
-                icon_size="16"
-                preset_name_label="true">
-                <key key="amenity"
-                    value="school" />
-                <key key="isced:level"
-                    value="0;1;2;3" />
-                <key key="min_age"
-                    value="3" />
-            </item> <!-- NVK_2 territory -->
-            <item name="School (I-II) territory"
-                uk.name="Територія школи (I-II ступенів)"
-                type="closedway,multipolygon"
-                icon="https://raw.githubusercontent.com/slayzx/josm_school_ua/master/icons/school_1.svg"
-                icon_size="16"
-                preset_name_label="true">
-                <key key="amenity"
-                    value="school" />
-                <key key="isced:level"
-                    value="1;2" />
-            </item> <!-- School_1 territory -->
-            <item name="School (I-III) territory"
-                uk.name="Територія школи (I-III ступенів)"
-                type="closedway,multipolygon"
-                icon="https://raw.githubusercontent.com/slayzx/josm_school_ua/master/icons/school_2.svg"
-                icon_size="16"
-                preset_name_label="true">
-                <key key="amenity"
-                    value="school" />
-                <key key="isced:level"
-                    value="1;2;3" />
-            </item> <!-- School_2 territory -->
+            <group name="Territory of the ..."
+                uk.name="Територія ..."
+                icon="icons/school/area.svg.svg"
+                icon_size="16">
+                <item name="NVK (І-ІІ)"
+                    uk.name="НВК (І-ІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="0;1;2" />
+                    <key key="min_age"
+                        value="3" />
+                </item> <!-- NVK_1 territory -->
+                <item name="NVK (І-ІІІ)"
+                    uk.name="НВК (І-ІІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="0;1;2;3" />
+                    <key key="min_age"
+                        value="3" />
+                </item> <!-- NVK_2 territory -->
+                <separator />
+                <item name="School (І-ІІ)"
+                    uk.name="Школи (І-ІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="1;2" />
+                </item> <!-- School_1 territory -->
+                <item name="School (І-ІІІ)"
+                    uk.name="Школи (І-ІІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="1;2;3" />
+                </item> <!-- School_2 territory -->
+            </group> <!-- One click territory-->
         </group> <!-- UA:School -->
     </group> <!-- UA:Education -->
 </presets>
