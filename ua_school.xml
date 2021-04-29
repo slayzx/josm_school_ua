@@ -5,87 +5,117 @@
     uk.shortdescription="UA:Освіта"
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовки для додавання навчальних закладів в Україні"
-    version="0.21_2021-04-29">
+    version="0.22_2021-04-29">
+
+    <!-- Template -->
+    <chunk id="name">
+        <text key="name"
+            text="Name" />
+        <text key="name:uk"
+            text="Ukrainian name"
+            uk.text="Назва українською" />
+        <text key="official_name"
+            text="Official name" />
+        <text key="short_name"
+            text="Common name abbreviation" />
+    </chunk>
+    <chunk id="operator">
+        <text key="operator"
+            text="Operator" />
+        <combo key="operator:type"
+            text="Type of operator"
+            uk.text="Тип оператора"
+            values="public,private,government"
+            uk.display_values="публічна (комунальна),приватна,державна"
+            values_sort="false" />
+    </chunk>
+    <chunk id="contact">
+        <text key="contact:phone"
+            text="Phone number, e.g. +380 44 123 4567"
+            uk.text="Телефон, наприклад +380 44 123 4567"
+            match_expression="phone|'contact:phone'" />
+        <text key="contact:email"
+            text="Email Address"
+            match_expression="email" />
+        <text key="contact:website"
+            text="Website"
+            match_expression="website" />
+        <text key="contact:facebook"
+            text="Facebook"
+            match_expression="facebook" />
+    </chunk>
+    <chunk id="fee">
+        <check key="fee"
+            text="Fee"
+            default="off"
+            delete_if_empty="true" />
+    </chunk>
+    <chunk id="capacity">
+        <text key="capacity"
+            text="Capacity" />
+    </chunk>
+    <chunk id="ref_edbo">
+        <text key="ref:edbo"
+            text="id institution in the EDBO register"
+            uk.text="Код закладу в реєстрі ЄДЕБО" />
+    </chunk>
+    <chunk id="ref_isuo">
+        <text key="ref:isuo"
+            text="id institution in the ISUO system"
+            uk.text="Номер закладу в системі ІСУО" />
+    </chunk>
+    <chunk id="ages">
+        <text key="min_age"
+            text="Minimum age" />
+        <text key="mах_age"
+            text="Maximum age" />
+    </chunk>
+    <!-- End Template -->
+
     <group name="UA:Education"
         uk.name="UA:Освіта"
         icon="icons/education.svg">
         <group name="UA:Schools"
             uk.name="Школи"
-            icon="icons/school/group.svg"
-            icon_size="16">
+            icon="icons/school/group.svg">
             <item name="School territory"
                 uk.name="Територія школи"
                 type="node,closedway,multipolygon"
-                icon="icons/school/item.svg"
+                icon="icons/school/area.svg"
                 preset_name_label="true">
-                <link wiki="Uk:Tag:amenity=school" text="Детальніше про теґування шкіл" />
+                <link wiki="Uk:Tag:amenity=school"
+                    uk.text="Детальніше про теґування шкіл" />
                 <key key="amenity"
                     value="school" />
-                <text key="name"
-                    text="Назва школи"
-                    default="" />
-                <text key="name:uk"
-                    text="Назва школи українською"
-                    default="" />
-                <text key="official_name"
-                    text="Офіційна назва"
-                    default="" />
-                <text key="short_name"
-                    text="Коротка назва"
-                    default="" />
-                <text key="operator"
-                    text="Керуюча установа"
-                    default="" />
-                <combo key="operator:type"
-                    text="Тип установи"
-                    values="public,private,government;"
-                    display_values="публічна (комунальна),приватна,державна"
-                    values_sort="false" />
-                <check key="fee"
-                    text="Плата за навчання"
-                    default="off"
-                    delete_if_empty="true" />
-                <text key="capacity"
-                    text="Макс. кількість учнів"
-                    default="" />
+                <reference ref="name" />
+                <reference ref="operator" />
+                <reference ref="fee" />
                 <item_separator />
-                <text key="contact:phone"
-                    text="Телефон, наприклад +380 44 123 4567"
-                    default="" />
-                <text key="contact:email"
-                    text="Електронна пошта"
-                    default="" />
-                <text key="contact:website"
-                    text="Сайт"
-                    default="" />
-                <text key="ref:edbo"
-                    text="Код школи в реєстрі ЄДЕБО"
-                    default="" />
-                <text key="ref:isuo"
-                    text="Номер школи в системі ІСУО"
-                    default="" />
+                <reference ref="contact" />
                 <item_separator />
+                <reference ref="ref_edbo" />
+                <reference ref="ref_isuo" />
+                <item_separator />
+                <label text="Use Ctrl or Shift to select multiple values "
+                    uk.text="Щоб вибрати кілька значень використовуйте Ctrl або Shift" />
                 <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)"
+                    text="ISCED level"
+                    uk.text="Рівень освіти (ISCED)"
                     values="0;1;2;3"
                     rows="5"
                     delete_if_empty="true" />
-                <text key="min_age"
-                    text="Мінімальний вік учнів"
-                    default="" />
-                <text key="mах_age"
-                    text="Максимальний вік учнів"
-                    default="" />
+                <reference ref="capacity" />
+                <reference ref="ages" />
             </item> <!-- School territory -->
             <group name="Territory of the ..."
                 uk.name="Територія ..."
-                icon="icons/school/area.svg"
+                icon="icons/school/item.svg"
                 preset_name_label="true">
                 <item name="NVK (І-ІІ)"
                     uk.name="НВК (І-ІІ ступенів)"
                     type="node,closedway,multipolygon"
                     preset_name_label="true"
-                    icon="icons/circle.svg">
+                    icon="icons/circle-2.svg">
                     <key key="amenity"
                         value="school" />
                     <key key="isced:level"
@@ -97,7 +127,7 @@
                     uk.name="НВК (І-ІІІ ступенів)"
                     type="node,closedway,multipolygon"
                     preset_name_label="true"
-                    icon="icons/circle.svg">
+                    icon="icons/circle-2.svg">
                     <key key="amenity"
                         value="school" />
                     <key key="isced:level"
