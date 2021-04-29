@@ -7,6 +7,7 @@
     uk.description="Заготовки для додавання навчальних закладів в Україні"
     version="0.21_2021-04-29">
     <chunk id="name_school">
+        <link wiki="Uk:Tag:amenity=school" text="Детальніше про теґування шкіл" />
         <key key="amenity"
              value="school" />
         <text key="name"
@@ -76,14 +77,15 @@
                 type="node,closedway,multipolygon"
                 icon="icons/school/item.svg"
                 preset_name_label="true">
-                <link wiki="Uk:Tag:amenity=school" text="Детальніше про теґування шкіл" />
                 <reference ref="name_school"/>
                 <reference ref="com_pattern"/>
                 <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)\nЩоб вибрати декілька\nкористуйтесь Ctrl або Shift"
+                    text="Рівень освіти (ISCED)"
                     values="0;1;2;3"
                     rows="5"
                     delete_if_empty="true" />
+                <label text="Щоб вибрати декілька користуйтесь Ctrl або Shift"/>
+                <space/>
                 <reference ref="min_max_age"/>
             </item> <!-- School territory -->
             <item name="NVK (І-ІІ)"
