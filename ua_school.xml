@@ -5,160 +5,158 @@
     uk.shortdescription="UA:Освіта"
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовки для додавання навчальних закладів в Україні"
-    version="0.21_2021-04-29">
-    <chunk id="name_school">
-        <link wiki="Uk:Tag:amenity=school" text="Детальніше про теґування шкіл" />
-        <key key="amenity"
-             value="school" />
+    version="0.22_2021-04-29">
+
+    <!-- Template -->
+    <chunk id="name">
         <text key="name"
-              text="Назва школи"
-              default="" />
+            text="Name" />
         <text key="name:uk"
-              text="Назва школи українською"
-              default="" />
-    </chunk>
-    <chunk id="com_pattern">
+            text="Ukrainian name"
+            uk.text="Назва українською" />
         <text key="official_name"
-              text="Офіційна назва"
-              default="" />
+            text="Official name" />
         <text key="short_name"
-              text="Коротка назва"
-              default="" />
+            text="Common name abbreviation" />
+    </chunk>
+    <chunk id="operator">
         <text key="operator"
-              text="Керуюча установа"
-              default="" />
+            text="Operator" />
         <combo key="operator:type"
-            text="Тип установи"
-            values="public,private,government;"
-            display_values="публічна (комунальна),приватна,державна"
+            text="Type of operator"
+            uk.text="Тип оператора"
+            values="public,private,government"
+            uk.display_values="публічна (комунальна),приватна,державна"
             values_sort="false" />
+    </chunk>
+    <chunk id="contact">
+        <text key="contact:phone"
+            text="Phone number, e.g. +380 44 123 4567"
+            uk.text="Телефон, наприклад +380 44 123 4567"
+            match_expression="phone|'contact:phone'" />
+        <text key="contact:email"
+            text="Email Address"
+            match_expression="email" />
+        <text key="contact:website"
+            text="Website"
+            match_expression="website" />
+        <text key="contact:facebook"
+            text="Facebook"
+            match_expression="facebook" />
+    </chunk>
+    <chunk id="fee">
         <check key="fee"
-            text="Плата за навчання"
+            text="Fee"
             default="off"
             delete_if_empty="true" />
+    </chunk>
+    <chunk id="capacity">
         <text key="capacity"
-            text="Макс. кількість учнів"
-            default="" />
-        <item_separator />
-        <text key="contact:phone"
-            text="Телефон, наприклад +380 44 123 4567"
-            default="" />
-        <text key="contact:email"
-            text="Електронна пошта"
-            default="" />
-        <text key="contact:website"
-            text="Сайт"
-            default="" />
+            text="Capacity" />
+    </chunk>
+    <chunk id="ref_edbo">
         <text key="ref:edbo"
-            text="Код школи в реєстрі ЄДЕБО"
-            default="" />
+            text="id institution in the EDBO register"
+            uk.text="Код закладу в реєстрі ЄДЕБО" />
+    </chunk>
+    <chunk id="ref_isuo">
         <text key="ref:isuo"
-            text="Номер школи в системі ІСУО"
-            default="" />
-        <item_separator />
+            text="id institution in the ISUO system"
+            uk.text="Номер закладу в системі ІСУО" />
     </chunk>
     <chunk id="min_max_age">
         <text key="min_age"
-              text="Мінімальний вік учнів"
-              default="" />
+            text="Minimum age" />
         <text key="mах_age"
-              text="Максимальний вік учнів"
-              default="" />
+            text="Maximum age" />
     </chunk>
+    <!-- End Template -->
+
     <group name="UA:Education"
         uk.name="UA:Освіта"
         icon="icons/education.svg">
         <group name="UA:Schools"
             uk.name="Школи"
-            icon="icons/school/group.svg"
-            icon_size="16">
+            icon="icons/school/group.svg">
             <item name="School territory"
                 uk.name="Територія школи"
                 type="node,closedway,multipolygon"
+                icon="icons/school/area.svg"
+                preset_name_label="true">
+                <link wiki="Uk:Tag:amenity=school"
+                    uk.text="Детальніше про теґування шкіл" />
+                <key key="amenity"
+                    value="school" />
+                <reference ref="name" />
+                <reference ref="operator" />
+                <reference ref="fee" />
+                <item_separator />
+                <reference ref="contact" />
+                <item_separator />
+                <reference ref="ref_edbo" />
+                <reference ref="ref_isuo" />
+                <item_separator />
+                <label text="Use Ctrl or Shift to select multiple values "
+                    uk.text="Щоб вибрати кілька значень використовуйте Ctrl або Shift" />
+                <multiselect key="isced:level"
+                    text="ISCED level"
+                    uk.text="Рівень освіти (ISCED)"
+                    values="0;1;2;3"
+                    rows="5"
+                    delete_if_empty="true" />
+                <reference ref="capacity" />
+                <reference ref="min_max_age" />
+            </item> <!-- School territory -->
+            <group name="Territory of the ..."
+                uk.name="Територія ..."
                 icon="icons/school/item.svg"
                 preset_name_label="true">
-                <reference ref="name_school"/>
-                <reference ref="com_pattern"/>
-                <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)"
-                    values="0;1;2;3"
-                    rows="5"
-                    delete_if_empty="true" />
-                <label text="Щоб вибрати декілька користуйтесь Ctrl або Shift"/>
-                <space/>
-                <reference ref="min_max_age"/>
-            </item> <!-- School territory -->
-            <item name="NVK (І-ІІ)"
-                  uk.name="НВК (І-ІІ ступенів)"
-                  type="node,closedway,multipolygon"
-                  preset_name_label="true"
-                  icon="icons/circle.svg">
-                <reference ref="name_school"/>
-                <reference ref="com_pattern"/>
-                <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)"
-                    values="0;1;2;3"
-                    default="0;1;2"
-                    rows="5"
-                    delete_if_empty="true" />
-                <text key="min_age"
-                      text="Мінімальний вік учнів"
-                      default="3" />
-                <text key="mах_age"
-                      text="Максимальний вік учнів"
-                      default="" />
-            </item> <!-- NVK_1 territory -->
-            <item name="NVK (І-ІІІ)"
-                  uk.name="НВК (І-ІІІ ступенів)"
-                  type="node,closedway,multipolygon"
-                  preset_name_label="true"
-                  icon="icons/circle.svg">
-                <reference ref="name_school"/>
-                <reference ref="com_pattern"/>
-                <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)"
-                    values="0;1;2;3"
-                    default="0;1;2;3"
-                    rows="5"
-                    delete_if_empty="true" />
-                <text key="min_age"
-                      text="Мінімальний вік учнів"
-                      default="3" />
-                <text key="mах_age"
-                      text="Максимальний вік учнів"
-                      default="" />
-            </item> <!-- NVK_2 territory -->
-            <separator />
-            <item name="School (І-ІІ)"
-                  uk.name="Школи (І-ІІ ступенів)"
-                  type="node,closedway,multipolygon"
-                  preset_name_label="true"
-                  icon="icons/circle.svg">
-                <reference ref="name_school"/>
-                <reference ref="com_pattern"/>
-                <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)"
-                    values="0;1;2;3"
-                    default="1;2"
-                    rows="5"
-                    delete_if_empty="true" />
-                <reference ref="min_max_age"/>
-            </item> <!-- School_1 territory -->
-            <item name="School (І-ІІІ)"
-                  uk.name="Школи (І-ІІІ ступенів)"
-                  type="node,closedway,multipolygon"
-                  preset_name_label="true"
-                  icon="icons/circle.svg">
-                <reference ref="name_school"/>
-                <reference ref="com_pattern"/>
-                <multiselect key="isced:level"
-                    text="Рівень освіти (ISCED)"
-                    values="0;1;2;3"
-                    default="1;2;3"
-                    rows="5"
-                    delete_if_empty="true" />
-                <reference ref="min_max_age"/>
-            </item> <!-- School_2 territory -->
+                <item name="NVK (І-ІІ)"
+                    uk.name="НВК (І-ІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true"
+                    icon="icons/circle-2.svg">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="0;1;2" />
+                    <key key="min_age"
+                        value="3" />
+                </item> <!-- NVK_1 territory -->
+                <item name="NVK (І-ІІІ)"
+                    uk.name="НВК (І-ІІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true"
+                    icon="icons/circle-2.svg">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="0;1;2;3" />
+                    <key key="min_age"
+                        value="3" />
+                </item> <!-- NVK_2 territory -->
+                <separator />
+                <item name="School (І-ІІ)"
+                    uk.name="Школи (І-ІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true"
+                    icon="icons/circle.svg">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="1;2" />
+                </item> <!-- School_1 territory -->
+                <item name="School (І-ІІІ)"
+                    uk.name="Школи (І-ІІІ ступенів)"
+                    type="node,closedway,multipolygon"
+                    preset_name_label="true"
+                    icon="icons/circle.svg">
+                    <key key="amenity"
+                        value="school" />
+                    <key key="isced:level"
+                        value="1;2;3" />
+                </item> <!-- School_2 territory -->
+            </group> <!-- One click territory-->
         </group> <!-- UA:School -->
     </group> <!-- UA:Education -->
 </presets>
