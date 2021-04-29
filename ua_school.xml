@@ -47,7 +47,6 @@
     <chunk id="fee">
         <check key="fee"
             text="Fee"
-            default="off"
             delete_if_empty="true" />
     </chunk>
     <chunk id="capacity">
