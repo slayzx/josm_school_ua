@@ -16,8 +16,8 @@
 ### Застаріла заготовка у редакторі JOSM:
 * Перезапустіть редактор
 * Видаліть файл заготовки із кешу. Розташування теки кешу:
- * **Linux**: `$HOME/.cache/JOSM/` або '$HOME/.cache/JOSM-latest/`
- * **macOS**: `Users/<YourName>/Library/Caches/JOSM`
- * **Windows**: `C:\Users\<YourName>\AppData\Local\JOSM\cache`
+  * **Linux**: `$HOME/.cache/JOSM/` або `$HOME/.cache/JOSM-latest/`
+  * **macOS**: `Users/<YourName>/Library/Caches/JOSM`
+  * **Windows**: `C:\Users\<YourName>\AppData\Local\JOSM\cache`
 
 [Детальніше про місце знаходження теки.](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
