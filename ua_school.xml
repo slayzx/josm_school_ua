@@ -5,10 +5,10 @@
     uk.shortdescription="UA:Освіта"
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовки для додавання навчальних закладів в Україні"
-    version="0.20_2021-04-29">
+    version="0.21_2021-04-29">
     <group name="UA:Education"
         uk.name="UA:Освіта"
-        icon="icons/edu.svg">
+        icon="icons/education.svg">
         <group name="UA:Schools"
             uk.name="Школи"
             icon="icons/school/group.svg"
@@ -17,7 +17,6 @@
                 uk.name="Територія школи"
                 type="node,closedway,multipolygon"
                 icon="icons/school/item.svg"
-                icon_size="16"
                 preset_name_label="true">
                 <link wiki="Uk:Tag:amenity=school" text="Детальніше про теґування шкіл" />
                 <key key="amenity"
@@ -80,12 +79,13 @@
             </item> <!-- School territory -->
             <group name="Territory of the ..."
                 uk.name="Територія ..."
-                icon="icons/school/area.svg.svg"
-                icon_size="16">
+                icon="icons/school/area.svg"
+                preset_name_label="true">
                 <item name="NVK (І-ІІ)"
                     uk.name="НВК (І-ІІ ступенів)"
                     type="node,closedway,multipolygon"
-                    preset_name_label="true">
+                    preset_name_label="true"
+                    icon="icons/circle.svg">
                     <key key="amenity"
                         value="school" />
                     <key key="isced:level"
@@ -96,7 +96,8 @@
                 <item name="NVK (І-ІІІ)"
                     uk.name="НВК (І-ІІІ ступенів)"
                     type="node,closedway,multipolygon"
-                    preset_name_label="true">
+                    preset_name_label="true"
+                    icon="icons/circle.svg">
                     <key key="amenity"
                         value="school" />
                     <key key="isced:level"
@@ -108,7 +109,8 @@
                 <item name="School (І-ІІ)"
                     uk.name="Школи (І-ІІ ступенів)"
                     type="node,closedway,multipolygon"
-                    preset_name_label="true">
+                    preset_name_label="true"
+                    icon="icons/circle.svg">
                     <key key="amenity"
                         value="school" />
                     <key key="isced:level"
@@ -117,7 +119,8 @@
                 <item name="School (І-ІІІ)"
                     uk.name="Школи (І-ІІІ ступенів)"
                     type="node,closedway,multipolygon"
-                    preset_name_label="true">
+                    preset_name_label="true"
+                    icon="icons/circle.svg">
                     <key key="amenity"
                         value="school" />
                     <key key="isced:level"

@@ -5,8 +5,12 @@
 
 ## Як встановити заготовку
 
-Додайте https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip в редактор JOSM за наступною послідовністю:
+Додайте `https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip` 
 
-Заготовки -> Налаштування заготовок -> Активні заготовки «+»
+**В редактор JOSM**: *Заготовки* -> *Налаштування заготовок* -> *Активні заготовки* -> «*+*»
 
-Якщо у заготовці відбулись якісь зміни і ви їх не бачите у своєму редакторі, то треба закрити JOSM та видалити файл заготовки із папки кешу редактора, а де саме знаходиться ця папка у вашій операційній ситемі ви можете дізнатись із цієї [інструкції](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
+**Vespucci**: *Керування заготовками* -> *Додати заготовку* -> «*+*»
+
+## Вирішення проблем
+Якщо у заготовці відбулись якісь зміни і ви їх не бачите у своєму редакторі.
+Треба закрити JOSM та видалити файл заготовки із теки кешу. [Детальніше про місце знаходження теки](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
