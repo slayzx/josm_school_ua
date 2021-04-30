@@ -74,9 +74,13 @@
     <group name="UA:Education"
         uk.name="UA:Освіта"
         icon="icons/education.svg">
+        <group name="UA:Kindergartens"
+               uk.name="Садочки"
+               icon="icons/childcare_area.svg">
+        </group> <!-- UA:Kindergartens -->
         <group name="UA:Schools"
-            uk.name="Школи"
-            icon="icons/school/group.svg">
+               uk.name="Школи"
+               icon="icons/school/group.svg">
             <item name="School territory"
                 uk.name="Територія школи"
                 type="node,closedway,multipolygon"
@@ -157,5 +161,11 @@
                 </item> <!-- School_2 territory -->
             </group> <!-- One click territory-->
         </group> <!-- UA:School -->
+        <group name="UA:Colleges"
+               uk.name="Коледжі"
+               icon="icons/college_area.svg">
+        </group> <!-- UA:Colleges -->
+        <group name="UA:Universities">
+        </group> <!-- UA:Universities -->
     </group> <!-- UA:Education -->
 </presets>
