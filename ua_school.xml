@@ -4,8 +4,8 @@
     shortdescription="UA:Education"
     uk.shortdescription="UA:Освіта"
     description="Preset for educational institutions in Ukraine"
-    uk.description="Заготовки для додавання навчальних закладів в Україні"
-    version="0.22_2021-04-29">
+    uk.description="Заготовка для додавання навчальних закладів в Україні"
+    version="0.30_2021-05-01">
 
     <!-- Template -->
     <chunk id="name">
@@ -47,6 +47,7 @@
     <chunk id="fee">
         <check key="fee"
             text="Fee"
+            value_off=""
             delete_if_empty="true" />
     </chunk>
     <chunk id="capacity">
@@ -75,12 +76,54 @@
         uk.name="UA:Освіта"
         icon="icons/education.svg">
         <group name="UA:Kindergartens"
-               uk.name="Садочки"
-               icon="icons/childcare_area.svg">
-        </group> <!-- UA:Kindergartens -->
+            uk.name="Садочки"
+            icon="icons/kindergarten/group.svg">
+            <item name="kindergarten territory"
+                uk.name="Територія садочка"
+                type="node,closedway,multipolygon"
+                icon="icons/kindergarten/area.svg"
+                preset_name_label="true">
+                <link wiki="Uk:Tag:amenity=kindergarten"
+                    uk.text="Детальніше про теґування дитячих садків" />
+                    <key key="amenity"
+                    value="kindergarten" />
+                <combo key="amenity"
+                    uk.text="Тип садочка"
+                    values="childcare,kindergarten"
+                    uk.display_values="Ясла,Дитячий садок (Ясла-садок)"
+                    values_sort="false" />
+                <reference ref="name" />
+                <reference ref="operator" />
+                <reference ref="fee" />
+                <item_separator />
+                <reference ref="contact" />
+                <item_separator />
+                <reference ref="ref_edbo" />
+                <reference ref="ref_isuo" />
+                <item_separator />
+                <label text="Add additional tags:"
+                    uk.text="Додати додаткові теґи:" />
+                <checkgroup columns="2">
+                    <check key="nursery"
+                        text="Nursery"
+                        uk.text="до ясел-садка"
+                        value_on="yes"
+                        value_off=""
+                        delete_if_empty="true" />
+                    <check key="isced:level"
+                        text="Add ISCED level"
+                        uk.text="Рівень освіти (ISCED) - 0"
+                        value_on="0"
+                        value_off=""
+                        delete_if_empty="true" />
+                </checkgroup>
+                <reference ref="capacity" />
+                <reference ref="min_max_age" />
+            </item> <!-- School territory -->
+        </group> <!-- Kindergartens -->
         <group name="UA:Schools"
-               uk.name="Школи"
-               icon="icons/school/group.svg">
+            uk.name="Школи"
+            icon="icons/school/group.svg">
             <item name="School territory"
                 uk.name="Територія школи"
                 type="node,closedway,multipolygon"
@@ -112,7 +155,7 @@
             </item> <!-- School territory -->
             <group name="Territory of the ..."
                 uk.name="Територія ..."
-                icon="icons/school/item.svg"
+                icon="icons/item.svg"
                 preset_name_label="true">
                 <item name="NVK (І-ІІ)"
                     uk.name="НВК (І-ІІ ступенів)"
@@ -160,12 +203,7 @@
                         value="1;2;3" />
                 </item> <!-- School_2 territory -->
             </group> <!-- One click territory-->
-        </group> <!-- UA:School -->
-        <group name="UA:Colleges"
-               uk.name="Коледжі"
-               icon="icons/college_area.svg">
-        </group> <!-- UA:Colleges -->
-        <group name="UA:Universities">
-        </group> <!-- UA:Universities -->
+        </group> <!-- School -->
+
     </group> <!-- UA:Education -->
 </presets>
