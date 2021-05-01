@@ -5,6 +5,7 @@
     uk.shortdescription="UA:Освіта"
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовка для додавання навчальних закладів в Україні"
+    link="https://github.com/slayzx/josm_school_ua"
     version="0.30_2021-05-01">
 
     <!-- Template -->
@@ -119,7 +120,7 @@
                 </checkgroup>
                 <reference ref="capacity" />
                 <reference ref="min_max_age" />
-            </item> <!-- School territory -->
+            </item> <!-- Kindergarten territory -->
         </group> <!-- Kindergartens -->
         <group name="UA:Schools"
             uk.name="Школи"
@@ -204,6 +205,5 @@
                 </item> <!-- School_2 territory -->
             </group> <!-- One click territory-->
         </group> <!-- School -->
-
     </group> <!-- UA:Education -->
 </presets>
