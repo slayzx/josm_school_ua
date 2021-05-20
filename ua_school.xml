@@ -6,7 +6,7 @@
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовка для додавання навчальних закладів в Україні"
     link="https://github.com/slayzx/josm_school_ua"
-    version="0.44_2021-05-20">
+    version="0.48_2021-05-21">
 
     <!-- Template -->
     <chunk id="name">
@@ -33,6 +33,7 @@
     <chunk id="name_and_operator">
         <reference ref="name" />
         <reference ref="operator" />
+        <item_separator />
         <reference ref="start_date" />
     </chunk>
     <chunk id="contact">
@@ -53,6 +54,7 @@
     <chunk id="fee">
         <check key="fee"
             text="Fee"
+            uk.text="Плата за навчання"
             value_off=""
             delete_if_empty="true" />
     </chunk>
@@ -85,22 +87,19 @@
 
     <group name="UA:Education"
         uk.name="UA:Освіта"
-        icon="icons/education.svg">
-        <item name="UA:Kindergartens"
-            uk.name="Садочки"
+        icon="icons/education.svg"
+        sort="false">
+        <item name="UA:Childcare"
+            uk.name="Ясла"
             type="node,closedway,multipolygon"
-            icon="icons/kindergarten/area.svg"
+            icon="icons/childcare.svg"
             preset_name_label="true">
-            <link wiki="Uk:Tag:amenity=kindergarten"
-                uk.text="Детальніше про теґування дитячих садків" />
+            <link wiki="Tag:amenity=childcare"
+                uk.text="Детальніше про теґування дитячих ясел" />
             <key key="amenity"
-                value="kindergarten" />
-            <combo key="amenity"
-                uk.text="Тип садочка"
-                values="childcare,kindergarten"
-                uk.display_values="Ясла,Дитячий садок (Ясла-садок)"
-                values_sort="false" />
+                value="childcare" />
             <reference ref="name_and_operator" />
+            <space />
             <reference ref="fee" />
             <item_separator />
             <reference ref="contact" />
@@ -108,29 +107,54 @@
             <reference ref="ref_edbo" />
             <reference ref="ref_isuo" />
             <item_separator />
-            <label text="Add additional tags:"
-                uk.text="Додати додаткові теґи:" />
-            <checkgroup columns="2">
-                <check key="nursery"
-                    text="Nursery"
-                    uk.text="до ясел-садка"
-                    value_on="yes"
-                    value_off=""
-                    delete_if_empty="true" />
-                <check key="isced:level"
-                    text="Add ISCED level"
-                    uk.text="Рівень освіти (ISCED) - 0"
-                    value_on="0"
-                    value_off=""
-                    delete_if_empty="true" />
-            </checkgroup>
+            <check key="isced:level"
+                text="Add ISCED level tags"
+                uk.text="Додати рівень освіти ISCED"
+                value_on="0"
+                value_off=""
+                delete_if_empty="true" />
+            <space />
+            <reference ref="capacity" />
+            <reference ref="min_max_age" />
+        </item> <!-- Childcare -->
+        <item name="UA:Kindergartens"
+            uk.name="Дитячий садок"
+            type="node,closedway,multipolygon"
+            icon="icons/kindergarten.svg"
+            preset_name_label="true">
+            <link wiki="Uk:Tag:amenity=kindergarten"
+                uk.text="Детальніше про теґування дитячих садків" />
+            <key key="amenity"
+                value="kindergarten" />
+            <combo key="nursery"
+                uk.text="Тип садочка"
+                values=",yes"
+                uk.display_values="Дитячий садок,Ясла-садок"
+                values_sort="false" />
+            <reference ref="name_and_operator" />
+            <space />
+            <reference ref="fee" />
+            <item_separator />
+            <reference ref="contact" />
+            <item_separator />
+            <reference ref="ref_edbo" />
+            <reference ref="ref_isuo" />
+            <item_separator />
+            <check key="isced:level"
+                text="Add ISCED level tags"
+                uk.text="Додати рівень освіти ISCED"
+                value_on="0"
+                value_off=""
+                delete_if_empty="true" />
+            <space />
             <reference ref="capacity" />
             <reference ref="min_max_age" />
         </item> <!-- Kindergartens -->
+        <separator />
         <item name="UA:Schools"
-            uk.name="Школи"
+            uk.name="Школа"
             type="node,closedway,multipolygon"
-            icon="icons/school/area.svg"
+            icon="icons/school.svg"
             preset_name_label="true">
             <link wiki="Uk:Tag:amenity=school"
                 uk.text="Детальніше про теґування шкіл" />
@@ -155,10 +179,12 @@
             <reference ref="capacity" />
             <reference ref="min_max_age" />
         </item> <!-- School -->
+        <separator />
+        <separator />
         <item name="UA:Higher education"
             uk.name="Вища освіта"
             type="node,closedway,multipolygon"
-            icon="icons/university/area.svg"
+            icon="icons/university.svg"
             preset_name_label="true">
             <link wiki="Uk:Key:isced:level"
                 uk.text="Детальніше про рівні освіти ISCED" />
@@ -181,6 +207,7 @@
                 rows="7"
                 delete_if_empty="true" />
         </item> <!-- Universities -->
+        <separator />
 
         <!-- OneClick -->
         <group name="OneClick"
@@ -191,7 +218,7 @@
                 uk.name="Ясла"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="icons/circle.svg">
+                icon="icons/circle-2.svg">
                 <key key="amenity"
                     value="school" />
                 <key key="isced:level"
@@ -203,7 +230,7 @@
                 uk.name="Ясла-садок"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="icons/circle-2.svg">
+                icon="icons/circle.svg">
                 <key key="amenity"
                     value="kindergarten" />
                 <key key="nursery"
