@@ -6,7 +6,8 @@
 
 ## Встановлення заготовки
 
-Додайте: `https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip` 
+Додайте: 
+`https://github.com/slayzx/josm_school_ua/archive/refs/heads/master.zip` 
 
 **В JOSM**: *Заготовки* -> *Налаштування заготовок* -> *Активні заготовки* -> «**+**»
 
@@ -20,4 +21,4 @@
   * **macOS**: `Users/<YourName>/Library/Caches/JOSM`
   * **Windows**: `C:\Users\<YourName>\AppData\Local\JOSM\cache`
 
-[Детальніше про місце знаходження теки.](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
+ [Детальніше про місце знаходження теки.](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
