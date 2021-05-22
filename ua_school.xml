@@ -6,7 +6,7 @@
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовка для додавання навчальних закладів в Україні"
     link="https://github.com/slayzx/josm_school_ua"
-    version="0.60_2021-05-22">
+    version="0.65_2021-05-22">
 
     <!-- Template -->
     <chunk id="name">
@@ -187,6 +187,47 @@
             <reference ref="min_max_age" />
         </item> <!-- School -->
         <separator />
+        <item name="UA:Vocational and incomplete higher"
+            uk.name="Фахова та професійна освіта"
+            type="node,closedway,multipolygon"
+            icon="josm_school_ua-master/icons/college.svg"
+            preset_name_label="true">
+            <link wiki="Uk:Key:isced:level"
+                uk.text="Детальніше про рівні освіти ISCED" />
+            <link wiki="Tag:amenity=college"
+                uk.text="Детальніше про фахової та професійної освіти" />
+            <key key="amenity"
+                value="college" />
+
+            <combo key="amenity"
+                uk.text="Тип закладу"
+                values="school,college"
+                uk.display_values="ліцей або училище,коледж"
+                values_sort="false" />
+            <!-- Можливо ще таким чином. Але додати пояснення
+                <combo key="amenity"
+                    uk.text="Кількість років навчання, при вступі в навчальний  заклад, після 9 класу школи"
+                    values="school,college"
+                    uk.display_values="3 (три) роки,4 (чотири) роки"
+                    values_sort="false" />
+                -->
+            <reference ref="name_and_operator" />
+            <item_separator />
+            <reference ref="contact" />
+            <item_separator />
+            <reference ref="ref_edbo" />
+            <item_separator />
+            <label text="Use Ctrl or Shift to select multiple values "
+                uk.text="Щоб вибрати кілька значень використовуйте Ctrl або Shift" />
+            <multiselect key="isced:level"
+                text="ISCED level"
+                uk.text="Рівень освіти (ISCED)"
+                values="3;4;5"
+                rows="4"
+                delete_if_empty="true" />
+            <reference ref="capacity" />
+            <reference ref="min_max_age" />
+        </item> <!-- Colleges -->
         <separator />
         <item name="UA:Higher education"
             uk.name="Вища освіта"
