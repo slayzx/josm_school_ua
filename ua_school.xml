@@ -6,7 +6,7 @@
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовка для додавання навчальних закладів в Україні"
     link="https://github.com/slayzx/josm_school_ua"
-    version="0.65_2021-05-22">
+    version="0.70_2021-05-30">
 
     <!-- Template -->
     <chunk id="name">
@@ -106,12 +106,12 @@
 
     <group name="UA:Education"
         uk.name="UA:Освіта"
-        icon="josm_school_ua-master/icons/education.svg"
+        icon="icons/education.png"
         sort="false">
         <item name="UA:Childcare"
             uk.name="Ясла"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/childcare.svg"
+            icon="icons/childcare.png"
             preset_name_label="true">
             <link wiki="Tag:amenity=childcare"
                 uk.text="Детальніше про теґування дитячих ясел" />
@@ -131,7 +131,7 @@
         <item name="UA:Kindergartens"
             uk.name="Дитячий садок"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/kindergarten.svg"
+            icon="icons/kindergarten.png"
             preset_name_label="true">
             <link wiki="Uk:Tag:amenity=kindergarten"
                 uk.text="Детальніше про теґування дитячих садків" />
@@ -157,7 +157,7 @@
         <item name="UA:Schools"
             uk.name="Школа"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/school.svg"
+            icon="icons/school.png"
             preset_name_label="true">
             <link wiki="Uk:Tag:amenity=school"
                 uk.text="Детальніше про теґування шкіл" />
@@ -175,7 +175,7 @@
             <reference ref="ref_edbo" />
             <reference ref="ref_isuo" />
             <item_separator />
-            <label text="Use Ctrl or Shift to select multiple values "
+            <label text="Use Ctrl or Shift to select multiple values"
                 uk.text="Щоб вибрати кілька значень використовуйте Ctrl або Shift" />
             <multiselect key="isced:level"
                 text="ISCED level"
@@ -190,7 +190,7 @@
         <item name="UA:Vocational and incomplete higher"
             uk.name="Фахова та професійна освіта"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/college.svg"
+            icon="icons/college.png"
             preset_name_label="true">
             <link wiki="Uk:Key:isced:level"
                 uk.text="Детальніше про рівні освіти ISCED" />
@@ -202,7 +202,7 @@
             <combo key="amenity"
                 uk.text="Тип закладу"
                 values="school,college"
-                uk.display_values="ліцей або училище,коледж"
+                uk.display_values="ліцей або училище,коледж, технікум (фаховий диплом)"
                 values_sort="false" />
             <!-- Можливо ще таким чином. Але додати пояснення
                 <combo key="amenity"
@@ -217,7 +217,7 @@
             <item_separator />
             <reference ref="ref_edbo" />
             <item_separator />
-            <label text="Use Ctrl or Shift to select multiple values "
+            <label text="Use Ctrl or Shift to select multiple values"
                 uk.text="Щоб вибрати кілька значень використовуйте Ctrl або Shift" />
             <multiselect key="isced:level"
                 text="ISCED level"
@@ -232,7 +232,7 @@
         <item name="UA:Higher education"
             uk.name="Вища освіта"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/university.svg"
+            icon="icons/university.png"
             preset_name_label="true">
             <link wiki="Uk:Key:isced:level"
                 uk.text="Детальніше про рівні освіти ISCED" />
@@ -246,7 +246,7 @@
             <item_separator />
             <reference ref="ref_edbo" />
             <item_separator />
-            <label text="Use Ctrl or Shift to select multiple values "
+            <label text="Use Ctrl or Shift to select multiple values"
                 uk.text="Щоб вибрати кілька значень використовуйте Ctrl або Shift" />
             <multiselect key="isced:level"
                 text="ISCED level"
@@ -258,7 +258,7 @@
         <separator />
         <item name="Playground"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/playground.svg"
+            icon="icons/playground.png"
             preset_name_label="true">
             <link wiki="Key:playground:theme"
                 uk.text="Детальніше про тему ігрового майданчику" />
@@ -276,7 +276,7 @@
         <item name="Fitness station"
             uk.name="Спортивна площадка"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/fitness.svg"
+            icon="icons/fitness.png"
             preset_name_label="true">
             <link wiki="Tag:leisure=fitness_station" />
             <key key="leisure"
@@ -288,7 +288,7 @@
         </item> <!-- Fitness -->
         <item name="Pitch"
             type="node,closedway,multipolygon"
-            icon="josm_school_ua-master/icons/sport.svg"
+            icon="icons/sport.png"
             preset_name_label="true">
             <link wiki="Uk:Key:leisure" />
             <key key="leisure"
@@ -313,13 +313,13 @@
         <!-- OneClick -->
         <group name="Presets"
             uk.name="Заготовки"
-            icon="josm_school_ua-master/icons/item.svg"
+            icon="icons/item.png"
             preset_name_label="true">
             <item name="Childcare"
                 uk.name="Ясла"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle-2.svg">
+                icon="icons/childcare.png">
                 <key key="amenity"
                     value="school" />
                 <key key="isced:level"
@@ -331,7 +331,7 @@
                 uk.name="Ясла-садок"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle.svg">
+                icon="icons/kindergarten.png">
                 <key key="amenity"
                     value="kindergarten" />
                 <key key="nursery"
@@ -345,7 +345,7 @@
                 uk.name="Дитячий садок"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle.svg">
+                icon="icons/kindergarten.png">
                 <key key="amenity"
                     value="kindergarten" />
                 <key key="isced:level"
@@ -359,47 +359,47 @@
                 uk.name="НВК (І-ІІ ступенів)"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle-2.svg">
+                icon="icons/school.png">
                 <key key="amenity"
                     value="school" />
                 <key key="isced:level"
                     value="0;1;2" />
                 <key key="min_age"
                     value="3" />
-            </item> <!-- NVK_1 -->
+            </item> <!-- NVK_2 -->
             <item name="NVK (І-ІІІ)"
                 uk.name="НВК (І-ІІІ ступенів)"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle-2.svg">
+                icon="icons/school.png">
                 <key key="amenity"
                     value="school" />
                 <key key="isced:level"
                     value="0;1;2;3" />
                 <key key="min_age"
                     value="3" />
-            </item> <!-- NVK_2 -->
+            </item> <!-- NVK_3 -->
             <separator />
             <item name="School (І-ІІ)"
-                uk.name="Школи (І-ІІ ступенів)"
+                uk.name="Школа (І-ІІ ступенів)"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle.svg">
+                icon="icons/school.png">
                 <key key="amenity"
                     value="school" />
                 <key key="isced:level"
                     value="1;2" />
-            </item> <!-- School_1 -->
+            </item> <!-- School_2 -->
             <item name="School (І-ІІІ)"
-                uk.name="Школи (І-ІІІ ступенів)"
+                uk.name="Школа (І-ІІІ ступенів)"
                 type="node,closedway,multipolygon"
                 preset_name_label="true"
-                icon="josm_school_ua-master/icons/circle.svg">
+                icon="icons/school.png">
                 <key key="amenity"
                     value="school" />
                 <key key="isced:level"
                     value="1;2;3" />
-            </item> <!-- School_2 -->
+            </item> <!-- School_3 -->
             <separator />
             <separator />
         </group> <!-- OneClick -->

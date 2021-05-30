@@ -6,13 +6,17 @@
 
 ## Встановлення заготовки
 
-Додайте: 
-`https://github.com/slayzx/josm_school_ua/archive/refs/heads/master.zip` 
+Додайте:
+
+    https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip
 
 **В JOSM**: *Заготовки* -> *Налаштування заготовок* -> *Активні заготовки* -> «**+**»
 
-**У Vespucci**: *Керування заготовками* -> *Додати заготовку* -> «**+**»
+**У Vespucci**: *Налаштування* -> *Заготовки* -> *Додати заготовку*
+або [за посиланням](vespucci://preset/?preseturl=https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip&presetname=UA:Освіта "за посиланням").
+
 ***
+
 ## Вирішення проблем
 ### Застаріла заготовка у редакторі JOSM:
 * Перезапустіть редактор
@@ -21,4 +25,9 @@
   * **macOS**: `Users/<YourName>/Library/Caches/JOSM`
   * **Windows**: `C:\Users\<YourName>\AppData\Local\JOSM\cache`
 
- [Детальніше про місце знаходження теки.](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
+  [Детальніше про місце знаходження теки.](https://josm.openstreetmap.de/wiki/Help/Preferences#JOSMpreferencedatacachedirectories)
+
+------------
+
+### Відсутні елементи заготовки чи переклад у Vespucci:
+На жаль, потрібно вимкнути стандартну заготовку Vespucci 😩
