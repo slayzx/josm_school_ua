@@ -10,10 +10,12 @@
 
     https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip
 
-**В JOSM**: *Заготовки* -> *Налаштування заготовок* -> *Активні заготовки* -> «**+**»
+**В JOSM**:
+* *Заготовки* -> *Налаштування заготовок* -> *Активні заготовки* -> «**+**»
 
-**У Vespucci**: *Налаштування* -> *Заготовки* -> *Додати заготовку*
-або [за посиланням](vespucci://preset/?preseturl=https://raw.githubusercontent.com/slayzx/josm_school_ua/master/josm_school_ua.zip&presetname=UA:Освіта "за посиланням").
+**У Vespucci**:
+* *Налаштування* -> *Заготовки* -> *Додати заготовку*
+* або [за посиланням](https://tinyurl.com/edu2vespucci).
 
 ***
 
