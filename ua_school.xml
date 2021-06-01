@@ -6,7 +6,7 @@
     description="Preset for educational institutions in Ukraine"
     uk.description="Заготовка для додавання навчальних закладів в Україні"
     link="https://github.com/slayzx/josm_school_ua"
-    version="0.70_2021-05-30">
+    version="0.71_2021-06-01">
 
     <!-- Template -->
     <chunk id="name">
@@ -63,6 +63,12 @@
                 text="Add ISCED level tags"
                 uk.text="Додати рівень освіти ISCED"
                 value_on="0"
+                value_off=""
+                delete_if_empty="true" />
+            <check key="landuse"
+                text="Add land use tag. Only for territories!"
+                uk.text="Додати теґ землекористування. Тільки для територій!"
+                value_on="education"
                 value_off=""
                 delete_if_empty="true" />
         </checkgroup>
@@ -169,6 +175,12 @@
                 uk.text="Плата за навчання"
                 value_off=""
                 delete_if_empty="true" />
+            <check key="landuse"
+                text="Add land use tag. Only for territories!"
+                uk.text="Додати теґ землекористування. Тільки для територій!"
+                value_on="education"
+                value_off=""
+                delete_if_empty="true" />
             <item_separator />
             <reference ref="contact" />
             <item_separator />
@@ -189,7 +201,7 @@
         <separator />
         <item name="UA:Vocational and incomplete higher"
             uk.name="Фахова та професійна освіта"
-            type="node,closedway,multipolygon"
+            type="closedway,multipolygon"
             icon="icons/college.png"
             preset_name_label="true">
             <link wiki="Uk:Key:isced:level"
@@ -198,11 +210,12 @@
                 uk.text="Детальніше про фахової та професійної освіти" />
             <key key="amenity"
                 value="college" />
-
+            <key key="landuse"
+                value="education" />
             <combo key="amenity"
                 uk.text="Тип закладу"
                 values="school,college"
-                uk.display_values="ліцей або училище,коледж, технікум (фаховий диплом)"
+                uk.display_values="ліцей або училище,коледж або технікум (фаховий диплом)"
                 values_sort="false" />
             <!-- Можливо ще таким чином. Але додати пояснення
                 <combo key="amenity"
@@ -231,7 +244,7 @@
         <separator />
         <item name="UA:Higher education"
             uk.name="Вища освіта"
-            type="node,closedway,multipolygon"
+            type="closedway,multipolygon"
             icon="icons/university.png"
             preset_name_label="true">
             <link wiki="Uk:Key:isced:level"
@@ -240,6 +253,8 @@
                 uk.text="Детальніше про теґування Вищих навчальних закладів" />
             <key key="amenity"
                 value="university" />
+            <key key="landuse"
+                value="education" />
             <reference ref="name_and_operator" />
             <item_separator />
             <reference ref="contact" />

@@ -1,24 +1,33 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: josm_school_ua\n"
-"POT-Creation-Date: 2021-05-30 16:02+0300\n"
-"PO-Revision-Date: 2021-05-30 17:48+0300\n"
+"POT-Creation-Date: 2021-06-01 21:13+0300\n"
+"PO-Revision-Date: 2021-06-01 21:28+0300\n"
+"Last-Translator: \n"
 "Language-Team: Ukrainian\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ua_school.xml:67(check:text|key:isced:level)
 msgid "Add ISCED level tags"
 msgstr "Додати рівень освіти ISCED"
 
-#: ua_school.xml:72(text:text|key:capacity)
+#: ua_school.xml:183(check:text|group:UA:Education|preset:UA:Schools|key:landuse)
+#: ua_school.xml:73(check:text|key:landuse)
+msgid "Add land use tag. Only for territories!"
+msgstr "Додати теґ землекористування. Тільки для територій!"
+
+#: ua_school.xml:78(text:text|key:capacity)
 msgid "Capacity"
 msgstr "Місткість"
 
-#: ua_school.xml:322(item:name|group:Presets|preset:Childcare)
+#: ua_school.xml:337(item:name|group:Presets|preset:Childcare)
 msgid "Childcare"
 msgstr "Ясла"
 
@@ -34,42 +43,42 @@ msgstr "Електронна пошта"
 msgid "Facebook"
 msgstr "Facebook"
 
-#: ua_school.xml:171(check:text|group:UA:Education|preset:UA:Schools|key:fee)
+#: ua_school.xml:177(check:text|group:UA:Education|preset:UA:Schools|key:fee)
 #: ua_school.xml:61(check:text|key:fee)
 msgid "Fee"
 msgstr "Плата за навчання"
 
-#: ua_school.xml:280(item:name|group:UA:Education|preset:Fitness_station)
+#: ua_school.xml:295(item:name|group:UA:Education|preset:Fitness_station)
 msgid "Fitness station"
 msgstr "Спортивна площадка"
 
-#: ua_school.xml:103(combo:text|key:access)
+#: ua_school.xml:109(combo:text|key:access)
 msgid "General Access"
 msgstr "Загальний доступ"
 
-#: ua_school.xml:185(multiselect:text|group:UA:Education|preset:UA:Schools|key:isced:level)
-#: ua_school.xml:227(multiselect:text|group:UA:Education|preset:UA:Vocational_and_incomplete_higher|key:isced:level)
-#: ua_school.xml:256(multiselect:text|group:UA:Education|preset:UA:Higher_education|key:isced:level)
+#: ua_school.xml:197(multiselect:text|group:UA:Education|preset:UA:Schools|key:isced:level)
+#: ua_school.xml:240(multiselect:text|group:UA:Education|preset:UA:Vocational_and_incomplete_higher|key:isced:level)
+#: ua_school.xml:271(multiselect:text|group:UA:Education|preset:UA:Higher_education|key:isced:level)
 msgid "ISCED level"
 msgstr "Рівень освіти (ISCED)"
 
-#: ua_school.xml:348(item:name|group:Presets|preset:Kindergarten)
+#: ua_school.xml:363(item:name|group:Presets|preset:Kindergarten)
 msgid "Kindergarten"
 msgstr "Дитячий садок"
 
-#: ua_school.xml:93(text:text|key:mах_age)
+#: ua_school.xml:99(text:text|key:mах_age)
 msgid "Maximum age"
 msgstr "Максимальний вік"
 
-#: ua_school.xml:91(text:text|key:min_age)
+#: ua_school.xml:97(text:text|key:min_age)
 msgid "Minimum age"
 msgstr "Мінімальний вік"
 
-#: ua_school.xml:362(item:name|group:Presets|preset:NVK_(І-ІІ))
+#: ua_school.xml:377(item:name|group:Presets|preset:NVK_(І-ІІ))
 msgid "NVK (І-ІІ)"
 msgstr "НВК (І-ІІ ступенів)"
 
-#: ua_school.xml:374(item:name|group:Presets|preset:NVK_(І-ІІІ))
+#: ua_school.xml:389(item:name|group:Presets|preset:NVK_(І-ІІІ))
 msgid "NVK (І-ІІІ)"
 msgstr "НВК (І-ІІІ ступенів)"
 
@@ -77,7 +86,7 @@ msgstr "НВК (І-ІІІ ступенів)"
 msgid "Name"
 msgstr "Назва"
 
-#: ua_school.xml:334(item:name|group:Presets|preset:Nursery)
+#: ua_school.xml:349(item:name|group:Presets|preset:Nursery)
 msgid "Nursery"
 msgstr "Ясла-садок"
 
@@ -93,39 +102,39 @@ msgstr "Оператор"
 msgid "Phone number, e.g. +380 44 123 4567"
 msgstr "Телефон, наприклад +380 44 123 4567"
 
-#: ua_school.xml:292(item:name|group:UA:Education|preset:Pitch)
+#: ua_school.xml:307(item:name|group:UA:Education|preset:Pitch)
 msgid "Pitch"
 msgstr "Спортивний майданчик"
 
-#: ua_school.xml:262(item:name|group:UA:Education|preset:Playground)
+#: ua_school.xml:277(item:name|group:UA:Education|preset:Playground)
 msgid "Playground"
 msgstr "Ігровий майданчик"
 
-#: ua_school.xml:317(group:name|group:Presets)
+#: ua_school.xml:332(group:name|group:Presets)
 msgid "Presets"
 msgstr "Заготовки"
 
-#: ua_school.xml:387(item:name|group:Presets|preset:School_(І-ІІ))
+#: ua_school.xml:402(item:name|group:Presets|preset:School_(І-ІІ))
 msgid "School (І-ІІ)"
 msgstr "Школа (І-ІІ ступенів)"
 
-#: ua_school.xml:397(item:name|group:Presets|preset:School_(І-ІІІ))
+#: ua_school.xml:412(item:name|group:Presets|preset:School_(І-ІІІ))
 msgid "School (І-ІІІ)"
 msgstr "Школа (І-ІІІ ступенів)"
 
-#: ua_school.xml:77(text:text|key:start_date)
+#: ua_school.xml:83(text:text|key:start_date)
 msgid "Start date"
 msgstr "Рік заснування закладу"
 
-#: ua_school.xml:98(combo:text|key:surface)
+#: ua_school.xml:104(combo:text|key:surface)
 msgid "Surface"
 msgstr "Поверхня"
 
-#: ua_school.xml:270(text:text|group:UA:Education|preset:Playground|key:playground:theme)
+#: ua_school.xml:285(text:text|group:UA:Education|preset:Playground|key:playground:theme)
 msgid "Theme of a playground"
 msgstr "Тема ігрового майданчику"
 
-#: ua_school.xml:300(combo:text|group:UA:Education|preset:Pitch|key:leisure)
+#: ua_school.xml:315(combo:text|group:UA:Education|preset:Pitch|key:leisure)
 msgid "Type"
 msgstr "Тип"
 
@@ -133,27 +142,27 @@ msgstr "Тип"
 msgid "Type of operator"
 msgstr "Тип оператора"
 
-#: ua_school.xml:115(item:name|group:UA:Education|preset:UA:Childcare)
+#: ua_school.xml:121(item:name|group:UA:Education|preset:UA:Childcare)
 msgid "UA:Childcare"
 msgstr "Ясла"
 
-#: ua_school.xml:110(group:name|group:UA:Education)
+#: ua_school.xml:116(group:name|group:UA:Education)
 msgid "UA:Education"
 msgstr "UA:Освіта"
 
-#: ua_school.xml:236(item:name|group:UA:Education|preset:UA:Higher_education)
+#: ua_school.xml:249(item:name|group:UA:Education|preset:UA:Higher_education)
 msgid "UA:Higher education"
 msgstr "Вища освіта"
 
-#: ua_school.xml:135(item:name|group:UA:Education|preset:UA:Kindergartens)
+#: ua_school.xml:141(item:name|group:UA:Education|preset:UA:Kindergartens)
 msgid "UA:Kindergartens"
 msgstr "Дитячий садок"
 
-#: ua_school.xml:161(item:name|group:UA:Education|preset:UA:Schools)
+#: ua_school.xml:167(item:name|group:UA:Education|preset:UA:Schools)
 msgid "UA:Schools"
 msgstr "Школа"
 
-#: ua_school.xml:194(item:name|group:UA:Education|preset:UA:Vocational_and_incomplete_higher)
+#: ua_school.xml:206(item:name|group:UA:Education|preset:UA:Vocational_and_incomplete_higher)
 msgid "UA:Vocational and incomplete higher"
 msgstr "Фахова та професійна освіта"
 
@@ -161,9 +170,9 @@ msgstr "Фахова та професійна освіта"
 msgid "Ukrainian name"
 msgstr "Назва українською"
 
-#: ua_school.xml:179(label:text|group:UA:Education|preset:UA:Schools)
-#: ua_school.xml:221(label:text|group:UA:Education|preset:UA:Vocational_and_incomplete_higher)
-#: ua_school.xml:250(label:text|group:UA:Education|preset:UA:Higher_education)
+#: ua_school.xml:191(label:text|group:UA:Education|preset:UA:Schools)
+#: ua_school.xml:234(label:text|group:UA:Education|preset:UA:Vocational_and_incomplete_higher)
+#: ua_school.xml:265(label:text|group:UA:Education|preset:UA:Higher_education)
 msgid "Use Ctrl or Shift to select multiple values"
 msgstr "Щоб вибрати кілька значень використовуйте Ctrl або Shift"
 
@@ -171,15 +180,15 @@ msgstr "Щоб вибрати кілька значень використову
 msgid "Website"
 msgstr "Вебсайт"
 
-#: ua_school.xml:82(text:text|key:ref:edbo)
+#: ua_school.xml:88(text:text|key:ref:edbo)
 msgid "id institution in the EDBO register"
 msgstr "Код закладу в реєстрі ЄДЕБО"
 
-#: ua_school.xml:87(text:text|key:ref:isuo)
+#: ua_school.xml:93(text:text|key:ref:isuo)
 msgid "id institution in the ISUO system"
 msgstr "Номер закладу в системі ІСУО"
 
-#: ua_school.xml:307(multiselect:text|group:UA:Education|preset:Pitch|key:sport)
+#: ua_school.xml:322(multiselect:text|group:UA:Education|preset:Pitch|key:sport)
 msgctxt "sport"
 msgid "Sport"
 msgstr "Спорт"
